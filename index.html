@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Conversores</title>
+    <script src="js/script.js"></script>
+  </head>
+  <body>
+    <div>
+      <h1>Conversor Decimal-Binário-Hexadecimal</h1>
+      <label for="decimal">Número decimal:</label>
+      <input type="text" id="decimal" />
+      <button onclick="converterDecBinHex()">Converter</button>
+      <p id="resultadoBinario1"></p>
+      <p id="resultadoHexadecimal1"></p>
+    </div>
+    <div>
+      <h1>Digite o numero desejado para conversao</h1>
+      <label for="binario">Número:</label>
+      <input type="text" id="numero" />
+      <button onclick="converterDecBinHex01()">Converter numero decimal</button>
+      <button onclick="converterBinDecHex()">Converter numero binario</button>
+      <button onclick="converterHexDecBin()">Converter numero hexadecimal</button>
+      <p id="resultado1"></p>
+      <p id="resultado2"></p>
+    </div>
+
+    <script>
+      function converterDecBinHex() {
+        var decimal = document.getElementById("decimal").value;
+        var binario = decimalParaBinario(decimal);
+        var hexadecimal = decimalParaHexadecimal(decimal);
+        document.getElementById("resultadoBinario1").textContent =
+          "Binario: " + binario;
+        document.getElementById("resultadoHexadecimal1").textContent =
+          "Hexadecimal: " + hexadecimal;
+      }
+
+      function converterDecBinHex01() {
+        var decimal = document.getElementById("numero").value;
+        var binario = decimalParaBinario(decimal);
+        var hexadecimal = decimalParaHexadecimal(decimal);
+        document.getElementById("resultado1").textContent =
+          "Binario: " + binario;
+        document.getElementById("resultado2").textContent =
+          "Hexadecimal: " + hexadecimal;
+      }
+
+      function converterBinDecHex() {
+        var binario = document.getElementById("numero").value;
+        var decimal = binarioParaDecimal(binario);
+        var hexadecimal = binarioParaHexadecimal(binario);
+        document.getElementById("resultado1").textContent = 
+        "Decimal: " + decimal;
+        document.getElementById("resultado2").textContent = 
+        "Hexadecimal: " + hexadecimal;
+      }
+
+      function converterHexDecBin() {
+        var hexadecimal = document.getElementById("numero").value;
+        var decimal = hexadecimalParaDecimal(hexadecimal);
+        var binario = hexadecimalParaBinario(hexadecimal);
+        document.getElementById("resultado1").textContent = 
+        "Decimal: " + decimal;
+        document.getElementById("resultado2").textContent = 
+        "Binario: " + binario;
+      }
+    </script>
+  </body>
+</html>
