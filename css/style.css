@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    background-color: aquamarine;
+}
+
+section{
+    background-color: rgb(248, 245, 245);
+    width: 1400px;
+    margin: auto;
+    display: flex;
+}
+
+.intro{
+    flex-direction: column;
+}
+
+.intro > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro h1, .intro > div h2{
+    text-align: center;
+}
+
+.intro h1{
+    font-size: 30px;
+    margin-top: 40px;
+    padding-bottom: 40px;
+}
+
+.intro > div h2{
+    font-size: 25px;
+}
+
+.intro > div p{
+    text-align: justify;
+    padding-top: 20px;
+}
+
+.intro > div img{
+    margin: 40px 0px;
+}
+
+.sistemas{
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 60px;
+}
+
+.sistemas > div{
+    width: 50%;
+    padding: 0px 20px;
+    margin: 0px 20px;
+}
+
+.sistemas > div h2, .conversoesExemplo > h2{
+    font-size: 30px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.sistemas > div p{
+    text-align: justify;
+}
+
+.conversoesExemplo{
+    flex-direction: column;
+}
+
+.conversoesExemplo > div{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0px;
+}
+
+.conversoesExemplo > div > div{
+    width: 50%;
+    padding: 40px 40px;
+    margin: 0px 20px;
+}
+
+.conversoesExemplo > div > div > h3{
+    font-size: 25px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.conversoesExemplo > div > div > p{
+    text-align: justify;
+    padding-bottom: 10px;
+}
+
+.conversoesExemplo > div > div > ol li{
+    text-align: justify;
+    padding-bottom: 10px;
+}
+
+.conversoes > div{
+    width: 50%;
+    padding: 50px;
+}
+
+.conversoes > div > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.conversoes > div h1{
+   font-size: 30px;
+   text-align: center;
+   padding-bottom: 20px;
+}
+
+.conversoes > div div label{
+    font-size: 20px;
+    padding-bottom: 0px;
+    text-align: center;
+    padding-bottom: 3px;
+ }
+
+ .conversoes > div div input{
+    background-color: aquamarine;
+    padding: 15px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    margin: auto;
+    font-size: 20px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+ }
+
+ .conversoes > div div h2{
+    text-align: center;
+    font-size: 20px;
+    padding: 20px 0px;
+ }
+
+ .conversoes > div div button{
+    font-size: 20px;
+    width: 200px;
+    border-radius: 40px;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+ }
+
+ .conversoes > div:first-child div button{
+   margin-top: 20px;
+ }
+
+ .conversoes > div div button:hover{
+    background-color: rgb(56, 87, 87);
+    color: whitesmoke;
+    cursor: pointer;
+ }
+
+ .conversoes > div p{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+ }

@@ -4,26 +4,216 @@
     <meta charset="UTF-8" />
     <title>Conversores</title>
     <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div>
-      <h1>Conversor Decimal-Binário-Hexadecimal</h1>
-      <label for="decimal">Número decimal:</label>
-      <input type="text" id="decimal" />
-      <button onclick="converterDecBinHex()">Converter</button>
-      <p id="resultadoBinario1"></p>
-      <p id="resultadoHexadecimal1"></p>
-    </div>
-    <div>
-      <h1>Digite o numero desejado para conversao</h1>
-      <label for="binario">Número:</label>
-      <input type="text" id="numero" />
-      <button onclick="converterDecBinHex01()">Converter numero decimal</button>
-      <button onclick="converterBinDecHex()">Converter numero binario</button>
-      <button onclick="converterHexDecBin()">Converter numero hexadecimal</button>
-      <p id="resultado1"></p>
-      <p id="resultado2"></p>
-    </div>
+    <section class="intro">
+      <h1>Sistema de numeração</h1>
+      <div>
+        <h2>O que são sistemas de numeração?</h2>
+        <p>
+          Um sistema de numeração é composto por regras e símbolos que
+          representam quantidades numéricas, facilitando a organização e
+          compreensão dos números. Esses sistemas permitem a realização de
+          operações matemáticas e a comunicação de informações numéricas. No
+          mundo, existem diversos sistemas de numeração, sendo os mais
+          conhecidos o decimal, binário e hexadecimal. Cada um possui uma base
+          numérica específica e um conjunto de símbolos utilizados para
+          representar quantidades.
+        </p>
+        <img src="img/sistemas.png" alt="" />
+      </div>
+    </section>
+    <section class="sistemas">
+      <div>
+        <h2>Sistema Decimal</h2>
+        <p>
+          O sistema de numeração decimal é o sistema numérico mais utilizado
+          atualmente. Ele é baseado em dez símbolos chamados algarismos,
+          contando com os números de 0 a 9.
+        </p>
+      </div>
+
+      <div>
+        <h2>Sistema Binário</h2>
+        <p>
+          O sistema de numeração binário é um sistema matemático fundamental na
+          área da computação e da eletrônica, ele possui uma base numérica de
+          dois e emprega apenas os dígitos 0 e 1 para representar seus valores.
+        </p>
+      </div>
+
+      <div>
+        <h2>Sistema Hexadecimal</h2>
+        <p>
+          O sistema de numeração hexadecimal é outro sistema numérico amplamente
+          utilizado em computação e programação, devido a sua relação direta com
+          o sistema binário e sua capacidade de representar números de forma
+          compacta, ele possui uma base de dezesseis. Os dígito de 0 a 9
+          representam os valores de 0 a 9, e as letras A a F são usadas para
+          representar os valores de 10 a 15.
+        </p>
+        <p>
+          No sistema hexadecimal, os dígitos são agrupados em pares quando
+          necessário, facilitando a leitura e representação. Ex: 2F (47), 3A
+          (58).
+        </p>
+      </div>
+    </section>
+    <section class="conversoesExemplo">
+      <h2>Exemplos de conversões</h2>
+
+      <div>
+        <div>
+          <h3>Conversão de Binário para Decimal</h3>
+          <p>
+            Para converter um número binário para decimal, siga os seguintes
+            passos:
+          </p>
+          <p></p>
+          <ol>
+            <li>
+              Atribua um valor posicional a cada dígito binário, começando da
+              direita para a esquerda. O dígito mais à direita tem uma posição
+              de valor 2⁰, o próximo tem uma posição de valor 2¹, o próximo 2² e
+              assim por diante, aumentando o expoente de 2 a cada posição.
+            </li>
+
+            <li>
+              Multiplique cada dígito binário pela potência de 2 correspondente
+              à sua posição e some os resultados.
+            </li>
+
+            <li>
+              O resultado da soma será o número equivalente na base decimal.
+            </li>
+          </ol>
+          <p>Por exemplo o número 10111:</p>
+          <p>(1 x 2⁴) + (0 x 2³) + (1 x 2²) + (1 x 2¹) + (1 x 2⁰)</p>
+          <p>Portanto, o resultado será 23.</p>
+          </div>
+        
+        <div>
+          <h3>Conversão de Decimal para Binário</h3>
+          <p>
+            Para converter um número decimal para binário, siga os seguintes
+            passos:
+          </p>
+          <p></p>
+          <ol>
+            <li>
+              Divida o número binário escolhido por 2 repetidamente, até que o
+              resto da divisão seja zero.
+            </li>
+            <li>Enquanto isso, registre os resultados dessas divisões.</li>
+            <li>
+              Organize os restos na ordem inversa para obter a representação
+              binária do número.
+            </li>
+            <p>Por exemplo, o número 27:</p>
+            <p>27 ÷ 2 = 13, resto 1;</p>
+            <p>13 ÷ 2 = 6, resto 1;</p>
+            <p>6 ÷ 2 = 3, resto 0;</p>
+            <p>3 ÷ 2 = 1, resto 1;</p>
+            <p>1 ÷ 2 = 0, resto 1;</p>
+            <p>Portanto, o resultado será 11011.</p>
+          </ol>
+        </div>
+      </div>
+
+      <div>
+        <div>
+          <h3>Conversão de Hexadecimal para Decimal</h3>
+          <p>
+            Para converter um número hexadecimal para decimal, siga os seguintes
+            passos:
+          </p>
+          <p></p>
+          <ol>
+            <li>
+              Atribua um valor posicional a cada dígito hexadecimal, começando
+              da direita para a esquerda. O dígito mais à direita tem uma
+              posição de valor 16⁰, o próximo tem uma posição de valor 16¹, o
+              próximo 16², e assim por diante, aumentando o expoente de 16 a
+              cada posição.
+            </li>
+            <li>
+              Converta cada dígito hexadecimal em seu valor decimal equivalente,
+              considerando os valores de 0 a 9 e as letras de A a F. Por
+              exemplo, A é equivalente a 10, B a 11, C a 12, D a 13, E a 14 e F
+              a 15.
+            </li>
+            <li>
+              Multiplique cada dígito hexadecimal pelo valor posicional
+              correspondente e some os resultados.
+            </li>
+            <p>Por exemplo, o número 2A:</p>
+            <p>2 x 16¹ + A x 16⁰;</p>
+            <p>2 x 16 + 10 x 1;</p>
+            <p>32 + 10</p>
+            <p>Portanto, o resultado será 42.</p>
+          </ol>
+        </div>
+
+        <div>
+          <h3>Conversão de Decimal para Hexadecimal</h3>
+          <p>
+            Para converter um número decimal para hexadecimal, siga os seguintes
+            passos:
+          </p>
+          <p></p>
+          <ol>
+            <li>
+              Divida o número decimal escolhido por 2 repetidamente, até que o
+              resto da divisão seja zero.
+            </li>
+            <li>
+              Anote o restante de cada divisão de baixo para cima, convertendo
+              os valores maiores que 9 em suas respectivas letras hexadecimais
+              (A a F).
+            </li>
+            <li>
+              A sequência de dígitos hexadecimais obtida será o equivalente
+              hexadecimal do número decimal.
+            </li>
+          </ol>
+          <p>Por exemplo, o número 157:</p>
+          <p>157 ÷ 16 = 9, resto 13 (D em hexadecimal)</p>
+          <p>9 ÷ 16 = 0, resto 9 (9 em hexadecimal)</p>
+          <p>Portanto, o resultado será 9D.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="conversoes">
+      <div>
+        <h1>Conversor Decimal Binário Hexadecimal</h1>
+        <div>
+        <label for="decimal">Número decimal:</label>
+        <input type="text" id="decimal" />
+        <button onclick="converterDecBinHex()">Converter</button>
+      </div>
+        <p id="resultadoBinario1"></p>
+        <p id="resultadoHexadecimal1"></p>
+      </div>
+      <div>
+        <h1>Digite o numero desejado para conversão</h1>
+        <div>
+        <label for="binario">Número:</label>
+        <input type="text" id="numero" />
+        <h2>Clique no sistema numérico do número escolhido: </h2>
+        <button onclick="converterDecBinHex01()">
+          DECIMAL
+        </button>
+        <button onclick="converterBinDecHex()">BINÁRIO</button>
+        <button onclick="converterHexDecBin()">
+          HEXADECIMAL
+        </button>
+      </div>
+        <p id="resultado1"></p>
+        <p id="resultado2"></p>
+      </div>
+    </section>
 
     <script>
       function converterDecBinHex() {
@@ -50,20 +240,20 @@
         var binario = document.getElementById("numero").value;
         var decimal = binarioParaDecimal(binario);
         var hexadecimal = binarioParaHexadecimal(binario);
-        document.getElementById("resultado1").textContent = 
-        "Decimal: " + decimal;
-        document.getElementById("resultado2").textContent = 
-        "Hexadecimal: " + hexadecimal;
+        document.getElementById("resultado1").textContent =
+          "Decimal: " + decimal;
+        document.getElementById("resultado2").textContent =
+          "Hexadecimal: " + hexadecimal;
       }
 
       function converterHexDecBin() {
         var hexadecimal = document.getElementById("numero").value;
         var decimal = hexadecimalParaDecimal(hexadecimal);
         var binario = hexadecimalParaBinario(hexadecimal);
-        document.getElementById("resultado1").textContent = 
-        "Decimal: " + decimal;
-        document.getElementById("resultado2").textContent = 
-        "Binario: " + binario;
+        document.getElementById("resultado1").textContent =
+          "Decimal: " + decimal;
+        document.getElementById("resultado2").textContent =
+          "Binario: " + binario;
       }
     </script>
   </body>
